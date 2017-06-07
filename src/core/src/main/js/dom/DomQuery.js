@@ -521,22 +521,8 @@ define(
               }
             });
           } else {
-            elm = self[0];
-
-            hook = cssHooks[name];
-            if (hook && hook.get) {
-              return hook.get(elm);
-            }
-
-            if (elm.ownerDocument.defaultView) {
-              try {
-                return elm.ownerDocument.defaultView.getComputedStyle(elm, null).getPropertyValue(dashed(name));
-              } catch (ex) {
-                return undef;
-              }
-            } else if (elm.currentStyle) {
-              return elm.currentStyle[camel(name)];
-            }
+            // Autopilot doesn't want inlined css to be messed up - aka do not merge padding-left, padding-right into padding: X Y    
+            return self;
           }
         }
 
