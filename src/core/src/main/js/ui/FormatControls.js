@@ -277,6 +277,7 @@ define(
 
         return {
           type: 'menu',
+          containerCls:'lightBlueMenu',
           items: createStylesMenu(),
           onPostRender: function (e) {
             editor.fire('renderFormatsMenu', { control: e.control });
@@ -716,7 +717,7 @@ define(
       });
 
       editor.addButton('fontsizeselect', function () {
-        var items = [], defaultFontsizeFormats = '8pt 10pt 12pt 14pt 18pt 24pt 36pt';
+        var items = [], defaultFontsizeFormats = '11px 12px 13px 14px 20px 24px 32px 48px';
         var fontsizeFormats = editor.settings.fontsize_formats || defaultFontsizeFormats;
 
         each(fontsizeFormats.split(' '), function (item) {
