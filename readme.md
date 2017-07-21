@@ -68,3 +68,22 @@ __How to Contribute to the Docs__
 Docs are hosted on Github in the [tinymce-docs](https://github.com/tinymce/tinymce-docs) repo.
 
 [How to contribute](https://www.tinymce.com/docs/advanced/contributing-docs/) to the docs, including a style guide, can be found on the TinyMCE website.
+
+
+### Autopilot Notes: 
+-----------------------------------
+
+To generate the tinymce src files:
+```bash
+change node version to 6.10.3
+remove node_modules in tinymce
+npm install
+grunt --force
+grunt bundle --themes=modern --plugins=image,code,link,textcolor
+```
+
+Local and production uses tinymce.min.js (stinson -> index.mustache).
+To test, copy over the newly generated src files over to stinson (admin/public/javascripts/vendor/tinymce/), then change the reference to point at the local copy; it will require stinson to be restarted.
+
+The file is stored on Rackspace CDN (user bislrdesign): Containers/tinymce/tinymceFull3/tinymce/
+Please make sure the new version has all the same files and directories
