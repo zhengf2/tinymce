@@ -82,7 +82,7 @@ grunt --force
 grunt bundle --themes=modern --plugins=image,code,link,textcolor
 ```
 
-Local and production uses tinymce.min.js (stinson -> index.mustache)
+Local and production uses tinymce.min.js (stinson -> index.mustache).
 To test, copy over the newly generated src files over to stinson (admin/public/javascripts/vendor/tinymce/), then change the reference to point at the local copy; it will require stinson to be restarted.
 
 The file is stored on Rackspace CDN (user bislrdesign): Containers/tinymce/tinymceFull3/tinymce/
