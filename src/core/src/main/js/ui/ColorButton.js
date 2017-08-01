@@ -37,7 +37,7 @@ define(
        */
       init: function (settings) {
         this._super(settings);
-        this.classes.add('colorbutton');
+        this.classes.add('colorbutton').add('open');
       },
 
       /**
